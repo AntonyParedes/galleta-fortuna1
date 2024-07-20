@@ -1,6 +1,6 @@
 const Phrase = ({ phraseSelected }) => {
   return (
-    <p className="text-center font-mono mb-6  text-gray-700">
+    <p className="font-mono mb-6  text-gray-700 top-auto left-auto ">
       {phraseSelected.phrase}
     </p>
   );
