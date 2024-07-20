@@ -27,7 +27,7 @@ function App() {
         fortuna
       </h1>
 
-      <article className="max-w-[400px] p-7 text- rounded-xl  fixed">
+      <article className="max-w-[400px] p-7 text- rounded-xl fixed">
         <Phrase phraseSelected={phraseSelected} />
         <BtnPhrase
           setPhraseSelected={setPhraseSelected}
