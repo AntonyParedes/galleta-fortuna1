@@ -11,7 +11,7 @@ const BtnPhrase = ({ setPhraseSelected, setBgSelected }) => {
   };
   return (
     <button
-      className="hover:scale-125 transition-transform cursor-pointer max-w-[400px] bg-emerald-500 p-6 rounded-xl shadow-2xl py-2 px-4 block ml-auto text-white  absolute tiny5-regular"
+      className="hover:scale-125 transition-transform cursor-pointer max-w-[400px] bg-emerald-500 p-6 rounded-xl shadow-2xl py-2 px-4 block ml-auto text-white tiny5-regular"
       onClick={changePhrase}>
       Abrir otra
     </button>
