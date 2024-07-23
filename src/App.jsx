@@ -22,13 +22,13 @@ function App() {
     <div
       style={objStyles}
       className="min-h-screen bg-cover bg-center flex justify-center items-center px-4">
-      <h1 className="absolute  top-36 text-5xl uppercase font-black text-center drop-shadow-lg stroke text-white bungee-regular shadow-gray-950 tiny5-regular">
+      <h1 className="absolute top-36 text-5xl uppercase  text-center drop-shadow-lg stroke text-white bungee-regular shadow-gray-950 tiny5-regular">
         Galleta de la
         <br />
         fortuna
       </h1>
 
-      <article className="max-w-[400px] p-7 text- rounded-xl fixed">
+      <article className="max-w-[400px] p-7 absolute">
         <Phrase phraseSelected={phraseSelected} />
         <BtnPhrase
           setPhraseSelected={setPhraseSelected}
