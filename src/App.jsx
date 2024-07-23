@@ -6,6 +6,8 @@ import Phrase from "./components/Phrase";
 import BtnPhrase from "./components/BtnPhrase";
 import photos from "./data/photos.json";
 import "./index.css";
+import Cookie from "./components/Cookie";
+import BtnCookie from "./components/BtnCookie";
 
 function App() {
   const indexRandom = getRandomNumbers(quotes.length);
@@ -13,6 +15,9 @@ function App() {
   const [bgSelected, setBgSelected] = useState(
     photos[getRandomNumbers(photos.length)]
   );
+  // animation
+  const [showCookie, setShowCookie] = useState(true);
+  const [animate, setAnimate] = useState(false);
 
   const objStyles = {
     backgroundImage: `url(/img/fondo${bgSelected}.jpg) `,
@@ -28,12 +33,24 @@ function App() {
         fortuna
       </h1>
 
-      <article className="max-w-[400px] p-7 text-center rounded-xl absolute">
-        <Phrase phraseSelected={phraseSelected} />
-        <BtnPhrase
-          setPhraseSelected={setPhraseSelected}
-          setBgSelected={setBgSelected}
-        />
+      <article className="max-w-[400px] p-7 text-center absolute">
+        {/* renderizado */}
+
+        {showCookie ? (
+          <Cookie showCookie={showCookie} animate={animate} />
+        ) : (
+          <Phrase phraseSelected={phraseSelected} />
+        )}
+
+        {showCookie ? (
+          <BtnCookie setShowCookie={setShowCookie} setAnimate={setAnimate} />
+        ) : (
+          <BtnPhrase
+            setPhraseSelected={setPhraseSelected}
+            setBgSelected={setBgSelected}
+            setShowCookie={setShowCookie}
+          />
+        )}
       </article>
 
       <img src="/img/rectangle1.svg" alt="Image " />
